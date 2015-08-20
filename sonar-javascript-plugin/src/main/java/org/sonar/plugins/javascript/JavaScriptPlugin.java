@@ -101,10 +101,7 @@ public class JavaScriptPlugin extends SonarPlugin {
       PropertyDefinition.builder(JavaScriptPlugin.IGNORE_HEADER_COMMENTS)
         .defaultValue(JavaScriptPlugin.IGNORE_HEADER_COMMENTS_DEFAULT_VALUE.toString())
         .name("jQuery object aliases")
-        .description("If set to \"true\", the file headers (that are usually the same on each file:" +
-          " licensing information for example) are not considered as comments. Thus metrics such as " +
-          "\"Comment lines\" do not get incremented. If set to \"false\", those file headers are " +
-          "considered as comments and metrics such as \"Comment lines\" get incremented.")
+        .description("True to not count file header comments in comment metrics.")
         .onQualifiers(Qualifiers.MODULE, Qualifiers.PROJECT)
         .subCategory(GENERAL)
         .type(PropertyType.BOOLEAN)
